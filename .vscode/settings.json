@@ -1,0 +1,8 @@
+{
+  "html.format.endWithNewline": true,
+  "typescript.preferences.quoteStyle": "single",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "html.format.wrapLineLength": 140
+}

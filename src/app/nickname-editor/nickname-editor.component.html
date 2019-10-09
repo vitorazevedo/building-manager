@@ -1,0 +1,65 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <label>
+      <span>Location</span>
+      <input
+        disabled
+        type="text"
+        class="form-control"
+        value="30 St Mary Axe, London"
+      >
+    </label>
+    <label>
+      <span>Description</span>
+      <textarea
+        disabled
+        class="form-control"
+        rows="3"
+      >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex iusto commodi odit ipsam possimus distinctio eligendi, natus fugit sequi voluptas, beatae, harum esse. Quas dolorum vitae qui praesentium exercitationem doloremque.
+      </textarea>
+    </label>
+  </div>
+  <hr>
+  <div class="form-group">
+    <label>
+      <span>Nickname</span>
+      <input
+        formControlName="nickname"
+        (keyup.enter)="addNickname(nicknameValue)"
+        #nicknameValue
+        type="text"
+        class="form-control"
+      />
+      <small class="form-text text-muted">
+        Type and press enter key to add the new nickname. Click on added nickname to remove it.
+      </small>
+      <div
+        class="alert alert-primary"
+        *ngIf="nickname.pending"
+      >Checking for uniqueness...</div>
+      <div
+        *ngIf="nickname.touched && nickname.invalid"
+        class="alert alert-danger"
+      >
+        <span *ngIf="nickname.errors.required">Nickname is required</span>
+        <span *ngIf="nickname.errors.minlength">Nickname should be minimum {{nickname.errors.minlength.requiredLength}} characters</span>
+        <span *ngIf="nickname.errors.shouldBeUnique">Nickname is already taken</span>
+      </div>
+    </label>
+  </div>
+  <ul>
+    <li
+      *ngFor="let nickname of nicknames.controls"
+      (click)="removeNickname(nickname)"
+    >
+      {{ nickname.value }}
+    </li>
+  </ul>
+  <!-- <p class="debug">{{ form.value | json }}</p> -->
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="form.invalid || nickname.pending"
+    (click)="submitForm()"
+  >Save</button>
+</form>
