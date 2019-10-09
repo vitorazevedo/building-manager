@@ -1,3 +1,8 @@
+# DEMO
+Use the string 'pringle' to simulate the unique nickname service.
+
+[Download Demo Video](https://raw.githubusercontent.com/vitorazevedo/building-manager/master/src/assets/demo.mp4)
+
 # BuildingManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
@@ -25,8 +30,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-# DEMO
-Use the string 'pringle' to simulate the unique nickname service.
-
-[Download Demo Video](https://raw.githubusercontent.com/vitorazevedo/building-manager/master/src/assets/demo.mp4)
