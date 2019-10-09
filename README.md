@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # DEMO
 Use the string 'pringle' to simulate the unique nickname service.
 
-![Demo](https://raw.githubusercontent.com/vitorazevedo/building-manager/master/src/assets/demo.mp4)
+[Download Demo Video](https://raw.githubusercontent.com/vitorazevedo/building-manager/master/src/assets/demo.mp4)
